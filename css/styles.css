@@ -43,12 +43,9 @@ body {
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
   font-family: 'Roboto', sans-serif;
-
-
 }
 
 /* HOMEWORK  55555555555555555555555555555555555555555555555 */
-
 
 .backdrop {
   position: fixed;
@@ -58,14 +55,16 @@ body {
   left: 0px;
   top: 0px;
 
+  z-index: 1;
   background: rgba(0, 0, 0, 0.2);
-} 
+
+  transition-duration: 250ms;
+}
 
 .modal {
-
   position: absolute;
- 
-  top: 50%; 
+
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -89,7 +88,6 @@ body {
   width: 30px;
   height: 30px;
 
-
   background-color: #ffffff;
   fill: #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -98,15 +96,12 @@ body {
   cursor: pointer;
 }
 
-
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
 
 /* HOMEWORK  55555555555555555555555555555555555555555555555 */
-
-
 
 ul {
   list-style: none;
@@ -141,7 +136,6 @@ ul {
 /* CONTAINER UNIVERSAL //////////////////////////////////*/
 
 .container {
-
   width: 1200px;
 
   padding-top: 0;
@@ -198,6 +192,10 @@ ul {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-nav {
@@ -234,6 +232,10 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -245,11 +247,10 @@ ul {
   color: var(--accent-text-color);
 }
 
-.contact-nav :hover,
-.contact-nav :focus {
+.link-contact:hover,
+.link-contact:focus {
   color: var(--accent-text-color);
 }
-
 
 .item-nav {
   position: relative;
@@ -263,10 +264,9 @@ ul {
   width: 100%;
   height: 4px;
 
-  background: #2196F3;
+  background: #2196f3;
   border-radius: 2px;
 }
-
 
 /* HOMEWORK 4 HEADER 444444444444444444444444444444444444444444*/
 
@@ -290,7 +290,6 @@ ul {
 
 /* HOMEWORK 4 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT */
 .hero {
-
   background-color: var(--accent-bg-color);
 
   width: 1600px;
@@ -340,6 +339,10 @@ ul {
   padding: 10px 32px;
   margin: 0 auto;
   border: none;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-secondary {
@@ -359,6 +362,10 @@ ul {
   padding: 6px 22px;
   max-width: 130px;
   border: none;
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-primary:hover,
@@ -370,6 +377,17 @@ ul {
 .button-secondary:focus {
   color: var(--base-white-color);
   background-color: var(--accent-secondary-bg-color);
+}
+
+.button-secondary:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+.button-secondary:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* Особливості (ЗАГОЛОВОК h2 прибрати в CSS) /////////////*/
@@ -473,44 +491,36 @@ ul {
   margin-bottom: 50px;
 }
 
-
 .item-works {
   position: relative;
 }
 
-
 .fon-works {
   position: absolute;
-width: 370px;
-height: 70px;
+  width: 370px;
+  height: 70px;
 
-bottom: 0;
+  bottom: 0;
 
-background: rgba(47, 48, 58, 0.8);
+  background: rgba(47, 48, 58, 0.8);
 }
 
 .text-works {
-
   margin: 0;
   padding-top: 27px;
   padding-bottom: 27px;
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-text-align: center;
-letter-spacing: 0.03em;
-text-transform: uppercase;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
-color: #FFFFFF;
+  color: #ffffff;
 }
-
-
-
-
-
 
 /* наша команда //////////////////////////////////////////*/
 
@@ -607,12 +617,14 @@ color: #FFFFFF;
   align-items: center;
   background-color: var(--base-white-bg-color);
   fill: var(--icon-fill-color);
+
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-social:hover {
   fill: var(--base-white-color);
-}
-.link-social:hover {
   background-color: #2196f3;
 }
 
@@ -640,9 +652,7 @@ color: #FFFFFF;
 
 .list-company {
   flex-basis: calc((100%-150px) / 6);
-  
 }
-
 
 .link-company {
   display: flex;
@@ -654,13 +664,14 @@ color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.25);
   background-color: var(--base-white-bg-color);
   fill: var(--icon-fill-color);
-  
+
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-company:hover {
   fill: var(--accent-secondary-bg-color);
-}
-.link-company:hover {
   border: 1px solid var(--accent-text-color);
 }
 
@@ -704,15 +715,23 @@ address {
 .link-maps {
   color: var(--base-white-color);
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-nav-secondary {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.block-footer .item :hover,
-.block-footer .item :focus {
+.contact-nav-secondary:hover,
+.contact-nav-secondary:focus {
   color: var(--accent-text-color);
 }
 
@@ -779,6 +798,10 @@ address {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   fill: #ffffff;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list-social:not(:last-child) {
@@ -823,18 +846,6 @@ address {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-
-.button-secondary:hover {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-.button-secondary:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-
 
 .description-filter {
   padding: 20px 24px;
@@ -884,80 +895,61 @@ address {
 .link-filter {
   text-decoration: none;
   display: block;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-filter:hover {
-
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
 
 .foto-filter {
   display: block;
 }
 
-/* TEST MOD 555555555555555555555555555555555555555555 */
-/* TEST MOD 555555555555555555555555555555555555555555 */
-/* TEST MOD 555555555555555555555555555555555555555555 */
+/*  MOD 555555555555555555555555555555555555555555 */
 
-
-/* .filter-thumb {
+.box-overlay {
   position: relative;
+  overflow: hidden;
 }
 
+.link-filter:hover .overlay {
+  transform: translate(0);
+}
 
-.filter-thumb::before {
-
+.overlay {
   position: absolute;
-  opacity: 0;
-  display: inline-block;
 
-  content: '';
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
 
-  bottom: 0px;
-  right: 0px;
-  background-color: red;
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-.text-befor {
-
-  display: block;
-  position: absolute;
-
-  opacity: 0;
+.overlay > .text-overlay {
   margin: 0;
- 
-  width: 322px;
-  height: 168px;
-  top: 63px;
-  left: 24px;
-  
+
+  padding-left: 24px;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 64px;
 
   font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 1.55;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
 
-letter-spacing: 0.03em;
-color: #ffffff;
+  letter-spacing: 0.03em;
+  color: #ffffff;
 }
-
-.text-befor:hover {
-  opacity: inherit;
-
-}
-.filter-thumb:hover{
-  opacity: 0.9;
-} */
-
-
-
-
-/* TEST MOD 555555555555555555555555555555555555555555 */
-/* TEST MOD 555555555555555555555555555555555555555555 */
-/* TEST MOD 555555555555555555555555555555555555555555 */
